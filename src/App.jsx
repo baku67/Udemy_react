@@ -8,7 +8,12 @@ function App() {
   const [currentDifficulty, setCurrentDifficulty] = useState(null)
 
   function changeDifficulty(newDifficulty) {
-    setCurrentDifficulty(newDifficulty)
+    if(newDifficulty==currentDifficulty) {
+      setCurrentDifficulty(null)
+    }
+    else {
+      setCurrentDifficulty(newDifficulty)
+    }
   }
   
   return (
