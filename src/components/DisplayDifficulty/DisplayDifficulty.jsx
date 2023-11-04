@@ -4,8 +4,8 @@ export function DisplayDifficulty(props) {
 
     return(
         <div className={s.container}>
-            {props.difficulty ? 
-                `Difficulty set to: ${props.difficulty}` :
+            {props.currentDifficulty ? 
+                `Difficulty set to: ${props.currentDifficulty}` :
                 "No difficulty set"
             }
         </div>

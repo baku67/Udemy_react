@@ -5,12 +5,18 @@ import { MenuList } from './components/MenuList/MenuList';
 
 function App() {
 
-  const [difficulty, setDifficulty] = useState(null)
+  const [currentDifficulty, setCurrentDifficulty] = useState(null)
+
+  function changeDifficulty(newDifficulty) {
+    setCurrentDifficulty(newDifficulty)
+  }
   
   return (
     <div style={{display:"inline-flex", width:"100%", justifyContent:"space-evenly"}}>
-      <MenuList />
-      <DisplayDifficulty difficulty={difficulty} />
+
+      <MenuList onItemClick={changeDifficulty} currentDifficulty={currentDifficulty} />
+      <DisplayDifficulty currentDifficulty={currentDifficulty} />
+
     </div>
   )
 }
