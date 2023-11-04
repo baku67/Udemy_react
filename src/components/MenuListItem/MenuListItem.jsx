@@ -5,13 +5,6 @@ export function MenuListItem({onClick, difficulty, isSelected}) {
 
     const [isHovered, setIsHovered] = useState(false);
 
-    function onMouseHover() {
-        setIsHovered(true)
-    }
-
-    function onMouseLeave() {
-        setIsHovered(false)
-    }
 
     function getBackgroundColor() {
         if(isHovered) {
@@ -29,12 +22,12 @@ export function MenuListItem({onClick, difficulty, isSelected}) {
     return(
         <div 
             className={s.container} 
-            onMouseEnter={onMouseHover} 
-            onMouseLeave={onMouseLeave}
             style={{
                 cursor: 'pointer', 
                 backgroundColor: getBackgroundColor()
             }}
+            onMouseEnter={() => setIsHovered(true)} 
+            onMouseLeave={() => setIsHovered(false)}
             onClick={() => onClick(difficulty)}
         >
             Set to {difficulty}

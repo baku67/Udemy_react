@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import viteLogo from '/vite.svg'
 import { DisplayDifficulty } from './components/DisplayDifficulty/DisplayDifficulty'
 import { MenuList } from './components/MenuList/MenuList';
 
